@@ -1,0 +1,22 @@
+{
+  "name": "flow-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/flow.min.css",
+  "files": [
+    "/dist/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OTaylorUK/Github---Flow.git"
+  },
+  "author": "Ollie Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OTaylorUK/Github---Flow/issues"
+  },
+  "homepage": "https://github.com/OTaylorUK/Github---Flow#readme"
+}
