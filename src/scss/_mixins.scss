@@ -70,22 +70,22 @@
 	@each $breakpoint, $flow_container-max-width in $max-widths {
 		@include media-breakpoint-up($breakpoint, $breakpoints) {
 				@if($breakpoint = xs){
-					&[data-type="stretch-right"],&[data-type="stretch-left"]{
+					&[data-flow-position="stretch_right"],&[data-flow-position="stretch_left"]{
 						.stretch_content{
 							left:  -$flow_container-padding-x ;
 							width: calc(100% + (calc(100vw - #{$flow_container-max-width})  ) / 2 + 15px);
 						}
-					}
+					} 
 				}
 				@if($breakpoint != xs){
-					&[data-type="stretch-left"]{
+					&[data-flow-position="stretch_left"]{
 						.stretch_content{
 							left: calc( (calc(100vw - #{$flow_container-max-width}) ) / -2);
 							right: 0;
 							width: calc( 100% + (calc(100vw - #{$flow_container-max-width}) ) / 2);
 						}
 					}
-					&[data-type="stretch-right"]{
+					&[data-flow-position="stretch_right"]{
 						.stretch_content{
 							left: 0;
 							width: calc( 100% + (calc(100vw - #{$flow_container-max-width}) ) / 2);
