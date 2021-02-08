@@ -1,0 +1,39 @@
+
+/* GRID LAYOUT VARIABLES */
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
+
+// PADDING //
+$flow_container-padding-x: $grid-gutter-width / 2 !default;
+
+$breakpoints: (
+	small: 700px,
+	medium: 1020px,
+	large: 1200px
+) !default;
+
+$breakpoints: (
+	small: 700px,
+	medium: 1020px,
+	large: 1200px
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+
+$flow_container-max-widths: (
+  xs: 100%,
+  sm: 540px,
+  md: 720px, 
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+) !default;

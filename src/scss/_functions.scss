@@ -1,0 +1,14 @@
+// mobile first
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min !=0, $min, null);
+}
+
+@function bp-return($name, $breakpoints) {
+
+	@if( map-get($breakpoints, $name) ) {
+		@return map-get($breakpoints, $name);
+	} @else {
+		@error "Property breakpoint: #{$name} does not exist. Please check this is correct.";
+	}
+}

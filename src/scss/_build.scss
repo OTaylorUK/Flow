@@ -1,0 +1,37 @@
+.flow_wrap{
+	@include make-flow_wrap();
+	overflow: hidden;
+}
+
+.flow_container {
+	// make flow_container
+	@include make-flow_container();
+	@include make-flow_container-max-widths();
+
+	&-fw{
+		@include make-fw-flow_container();
+	}
+}
+@mixin dynamic_content_size(){
+  @for $i from 1 through 100 {
+    &[data-flow-basis="#{$i}"]{
+      flex-basis: calc(#{$i} * 1%);
+    }
+  }
+	
+}
+.flow_content{
+	flex: 0 0 auto; 
+	max-width: 100%;
+	@include make-content_stretch();
+	.stretch_content{
+		z-index: 1;
+		position: relative;
+		overflow: visible;
+	}
+  @include dynamic_content_size();
+  &[data-flow-basis="auto"]{
+    flex-basis: auto;
+  }
+	
+}
