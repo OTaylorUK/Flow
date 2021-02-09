@@ -27,7 +27,7 @@
 	.stretch_content{
 		z-index: 1;
 		position: relative;
-		overflow: visible;
+		overflow: visible; 
 	}
   @include dynamic_content_size();
   &[data-flow-basis="auto"]{

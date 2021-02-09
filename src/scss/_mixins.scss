@@ -73,22 +73,23 @@
 					&[data-flow-position="stretch_right"],&[data-flow-position="stretch_left"]{
 						.stretch_content{
 							left:  -$flow_container-padding-x ;
-							width: calc(100% + (calc(100vw - #{$flow_container-max-width})  ) / 2 + 15px);
+							width: calc(100% + (calc(100vw - #{$flow_container-max-width})  ) / 2 + #{$flow_container-padding-x});
 						}
 					} 
 				}
 				@if($breakpoint != xs){
 					&[data-flow-position="stretch_left"]{
 						.stretch_content{
-							left: calc( (calc(100vw - #{$flow_container-max-width}) ) / -2);
+							left: calc(calc( (calc(100vw - #{$flow_container-max-width}) ) / -2 ) - #{$flow_container-padding-x} );
 							right: 0;
-							width: calc( 100% + (calc(100vw - #{$flow_container-max-width}) ) / 2);
+							width: calc(100% + (calc(100vw - #{$flow_container-max-width})  ) / 2 + #{$flow_container-padding-x});
+
 						}
 					}
 					&[data-flow-position="stretch_right"]{
 						.stretch_content{
 							left: 0;
-							width: calc( 100% + (calc(100vw - #{$flow_container-max-width}) ) / 2);
+							width: calc(100% + (calc(100vw - #{$flow_container-max-width})  ) / 2 + #{$flow_container-padding-x});
 						}
 					}
 				}

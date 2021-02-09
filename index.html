@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="/scss/main.min.css" media="all">
+	<link rel="stylesheet" href="/src/scss/flow.min.css" media="all">
 </head>
 <body>
 	<main> 
@@ -13,9 +13,9 @@
 			<div class="flow_container" >
 				<div class="flow_content">
 					content 1
-				</div>
+				</div> 
 
-				<div class="flow_content" data-type="stretch-right">
+				<div class="flow_content" data-flow-position="stretch_left">
 					<div class="stretch_content">
 						content 2
 
@@ -23,7 +23,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="flow_wrap">
+			<div class="flow_container" >
+				<div class="flow_content">
+					content 1
+				</div> 
 
+				<div class="flow_content" data-flow-position="stretch_right">
+					<div class="stretch_content">
+						content 2
+
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="flow_wrap">
 			<div class="flow_container" data-flow-direction="row" >
 				<div class="flow_content" data-type="stretch-left"  data-flow-basis="50">
