@@ -10,7 +10,7 @@
 
 	&-fw{
 		@include make-fw-flow_container();
-		@include make-flow_container-max-widths();
+		@include make-flow_container-max-widths_fw();
 	}
 }
 @mixin dynamic_content_size(){

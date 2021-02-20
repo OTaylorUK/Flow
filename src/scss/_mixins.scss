@@ -42,7 +42,26 @@
 		@content;
 	}
 }
+@mixin make-flow_container-max-widths_fw($max-widths: $flow_container-max-widths, $breakpoints: $grid-breakpoints) {
 
+	@each $breakpoint, $flow_container-max-width in $max-widths {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+
+			@if($breakpoint != xs){
+				&[data-flow-direction="row"]{
+					flex-flow: row;
+				}
+				&[data-flow-direction="row_wrap"]{
+					flex-flow: row wrap;
+				}
+				&[data-flow-direction="column"]{
+					flex-flow: column;
+				}
+			}
+			max-width: 100%;
+		}
+	}
+}
 
 @mixin make-flow_container-max-widths($max-widths: $flow_container-max-widths, $breakpoints: $grid-breakpoints) {
 
