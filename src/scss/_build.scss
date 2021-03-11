@@ -13,38 +13,10 @@
 		@include make-flow_container-max-widths_fw();
 	}
 }
-@mixin dynamic_content_size(){
-  @for $i from 1 through 100 {
-    &[data-flow-basis="#{$i}"]{
-      flex-basis: calc(#{$i} * 1%);
-    }
-  }
-}
+
+
 .flow_content{
-	@include display_flex(column);
-	flex: 0 1 auto; 
-	max-width: 100%;
-	// only works for % currently until attr() css selector added support
-	@include make-content_stretch();
-	.stretch_content{
-		z-index: 1;
-		position: relative;
-		overflow: visible; 
-	}
-	@include dynamic_content_size();
-	&[data-flow-basis="auto"]{ 
-		flex-basis: auto;
-	}
-	&[data-flow-basis="stretch"]{
-		flex: 1; 
-	}
-	&[data-flow-direction="row"]{
-		flex-flow: row;
-	}
-	&[data-flow-direction="row_wrap"]{
-		flex-flow: row wrap;
-	}
-	&[data-flow-direction="column"]{
-		flex-flow: column;
-	}
+	@include make-flow_content();
+	@include make-flow_content-responsive();
+
 }
