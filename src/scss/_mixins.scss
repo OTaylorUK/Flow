@@ -2,8 +2,11 @@
 // LEVEL 1: flow_wrap //
 @mixin make-flow_wrap($padding-x: $flow_container-padding-x) {
 	width: 100%;
+	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	@include display_flex(row_wrap);
+
 }
 
 // LEVEL 2: flow_container // 
