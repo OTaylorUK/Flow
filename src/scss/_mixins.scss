@@ -11,7 +11,7 @@
 
 // LEVEL 2: flow_container // 
 @mixin make-flow_container(){
-	@include display_flex(column);
+	@include display_flex(row wrap);
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: $flow_container-padding-x;
@@ -127,18 +127,18 @@
 	  }
 	}
   }
-   
+
   @mixin make-flow_content(){
-	  @include display_flex(column);
+	  @include display_flex(row wrap);
 	  flex: 0 1 auto; 
 	  max-width: 100%;
   
 	  // only works for % currently until attr() css selector added support
 	  @include make-content_stretch();
 	  .stretch_content{
-		  z-index: 1;
-		  position: relative;
-		  overflow: visible; 
+		display: inline-block ; 
+		position: relative;
+		overflow: visible; 
 	  }
   
 	  @include dynamic_content_size();
